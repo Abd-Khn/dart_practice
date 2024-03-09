@@ -7,6 +7,9 @@ void main (){
   var r1 = Remote();
   r1.volumeUp();
   r1.volumeDown();
+
+  var br1 = BatteryRemote();
+  br1.batteryInRemote();
 }
 
 class Remote{
@@ -20,7 +23,15 @@ class Remote{
   }
 }
 
-class Television implements Remote{
+class BatteryRemote{
+
+  void batteryInRemote(){
+    print("Batteries are Inserted in Remote");
+
+  }
+}
+
+class Television implements Remote, BatteryRemote{
 
   @override
   void volumeUp(){
@@ -30,5 +41,10 @@ class Television implements Remote{
   @override
   void volumeDown(){
     print("Vol down in TV");
+  }
+
+  @override
+  void batteryInRemote() {
+    print("Battery inserted in Remote");
   }
 }
