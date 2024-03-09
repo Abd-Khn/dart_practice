@@ -1,5 +1,3 @@
-import 'function_demo.dart';
-
 void main (){
 
   var std1 = Student();
