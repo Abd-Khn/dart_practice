@@ -17,8 +17,9 @@ class Student{
   late double percent;
   late double mileage;
 
-  set percentage(obtained){
-    percent = (obtained/1100) * 100;
+
+  set percentage(marksObtained){
+    percent = (marksObtained/1100) * 100;
   }
 
   get percentage{
